@@ -22,7 +22,14 @@ public class ReverseGroup {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		LinkedList ll=new LinkedList();
+		ll.insert(15);
+		ll.insert(25);
+		ll.insert(35);
+		ll.insert(45);
+		ll.insert(55);
+		ReverseGroup rg=new ReverseGroup();
+		System.out.println(rg.reverseGroup(ll.head, 2));
 
 	}
 
