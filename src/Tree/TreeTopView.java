@@ -24,12 +24,17 @@ public class TreeTopView {
 		while(!queue.isEmpty()){
 		QTree qt=queue.poll();
 		int id=qt.id;
-		if(!hs.contains(qt.id)){System.out.print(qt.node.data+" ");
-		hs.add(qt.id);}
-		if(qt.node.left!=null){queue.offer(new QTree(qt.node.left,id-1));
-		if(qt.node.right!=null){queue.offer(new QTree(qt.node.right,id+1));}
-		}}
-		
+		if(!hs.contains(qt.id)){
+			System.out.print(qt.node.data+" ");
+			hs.add(qt.id);
+			}
+		if(qt.node.left!=null){
+			queue.offer(new QTree(qt.node.left,id-1));
+			}
+		if(qt.node.right!=null){
+			queue.offer(new QTree(qt.node.right,id+1));
+			}
+		}
 	}
 
 	public static void main(String[] args) {

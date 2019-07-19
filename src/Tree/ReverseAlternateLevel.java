@@ -29,6 +29,32 @@ public class ReverseAlternateLevel {
 			queue.offer(temp1.right);
 		}
 	}return root;}
+	
+	public static void reverseAlternateLeveUtil(BinaryNode root){ 
+		int count=0;
+		Queue<BinaryNode> queue=new LinkedList<>();
+		queue.offer(root);
+		queue.offer(null);
+		while(!queue.isEmpty()){
+			BinaryNode temp=queue.poll();
+			if(temp!=null){
+				if(count%2!=0){
+					System.out.println(temp.data);
+				}
+				if(temp.left!=null){
+					 queue.add(temp.left);
+				 }
+				 if(temp.right!=null){
+					 queue.add(temp.right);
+				 }
+			}
+			else{
+				count++;
+				queue.offer(null);
+			}
+		}
+	}
+	
 
 	public static void main(String[] args) {
 		BinaryTree binaryTree=new BinaryTree();
@@ -47,9 +73,9 @@ public class ReverseAlternateLevel {
 		binaryTree.insert(13);
 		binaryTree.insert(14);
 		binaryTree.insert(15);
-		BinaryNode temp=reverseAlternateLevel(binaryTree.root);
-		List<Integer> list=LevelOrderTraversal.levelOrderTraversal(temp);
-		for(int i:list){System.out.println(i);}
+		reverseAlternateLeveUtil(binaryTree.root);
+		//List<Integer> list=LevelOrderTraversal.levelOrderTraversal(temp);
+		//for(int i:list){System.out.println(i);}
 	}
 
 }
