@@ -1,4 +1,4 @@
-package LinkedList;
+package Stack;
 
 public class FindNode {
 	Node head;

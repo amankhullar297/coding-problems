@@ -10,6 +10,8 @@ public class MergeLists {
 			
 		}	
 		}
+
+		return null;
 	}
 
 	public static void main(String[] args) {
