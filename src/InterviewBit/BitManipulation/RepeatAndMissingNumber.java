@@ -14,6 +14,8 @@ Link : https://www.interviewbit.com/problems/repeat-and-missing-number-array
 
 package InterviewBit.BitManipulation;
 
+import java.util.Arrays;
+
 public class RepeatAndMissingNumber {
 
     /*
@@ -24,7 +26,7 @@ public class RepeatAndMissingNumber {
     Space-complexity : 0(1)
      */
 
-    public int[] repeatedNumber(final int[] A) {
+    public int[] repeatedNumber1(final int[] A) {
         int[] ans = new int[2];
         for(int i=1; i<=A.length;i++)
         {
@@ -52,7 +54,7 @@ public class RepeatAndMissingNumber {
     Space-complexity : 0(1)
      */
 
-    public int[] repeatedNumber(final int[] A) {
+    public int[] repeatedNumber2(final int[] A) {
         int[] ans = new int[2];
         Arrays.sort(A);
         for(int i=0; i<A.length-1; i++)
@@ -75,7 +77,7 @@ public class RepeatAndMissingNumber {
     Space-complexity : 0(n)
      */
 
-    public int[] repeatedNumber(final int[] A) {
+    public int[] repeatedNumber3(final int[] A) {
         int[] ans = new int[2];
         int[] arr = new int[A.length+1];
 
@@ -108,7 +110,7 @@ public class RepeatAndMissingNumber {
     Space-complexity : 0(1)
      */
 
-    public int[] repeatedNumber(final int[] A) {
+    public int[] repeatedNumber4(final int[] A) {
         int x = 0, y = 0;
         int xor = A[0];
         for(int i=1; i<A.length; i++)
