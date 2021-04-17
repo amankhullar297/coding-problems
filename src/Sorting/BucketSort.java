@@ -22,26 +22,8 @@ package Sorting;
 import java.util.*;
 
 public class BucketSort {
-    public static void main(String[] a)
+  public void bucketSort(int[] arr)
     {
-        BucketSort sort = new BucketSort();
-        int[] arr = new int[] {5, 2, 1, 9, 23, 14, 12, 45, 65};
-        sort.bucketSort(arr);
-
-        for(int i=0 ; i< arr.length; i++)
-        {
-            System.out.print(arr[i] + " ");
-        }
-    }
-
-    public void bucketSort(int[] arr)
-    {
-
-        boolean isNegativePresent = false;
-        for (int i : arr) {
-            if (i < 0) isNegativePresent = true;
-        }
-
         int globalMax = Integer.MIN_VALUE;
         int globalMin = Integer.MAX_VALUE;
         for (int i = 0; i < arr.length; i++) {
