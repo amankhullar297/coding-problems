@@ -32,7 +32,7 @@ public class ZAlgorithm {
         return zArray;
     }
 
-    //calculate number of given subString present in String value.
+    //Calculate number of given subString present in String value.
     public int substringsInString(String value, String subString){
         value = subString + "$" + value;
         int[] zArray = calculateZArray(value);

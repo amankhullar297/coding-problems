@@ -22,4 +22,4 @@ Approach: Maintain an interval [L, R] which is the interval with max R such that
                   as i and start matching from str[R]  onwards  and get new R then we will update interval [L,R] and calculate Z[i] = (R-L+1).
 
 Time Complexity: 0(n)
-Space Complexity : 0(n)
+Space Complexity: 0(n)
