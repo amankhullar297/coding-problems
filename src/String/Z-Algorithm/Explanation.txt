@@ -1,0 +1,25 @@
+Z-Algorithm: Z-Algorithm is used to compute Z-Array.
+
+Z-Array: Z-Array tells number of repeating characters found from single character at any index i .
+         For a string str[0..n-1], Z-Array is of same length as string.
+         An element Z[i] of Z-Array stores length of the longest substring starting from str[i] which is also a prefix of str[0..n-1].
+
+Applications of Z-Algorithm:
+    1. It is used to check whether any substring exists in string.
+    2. It is used to calculate number of substrings present in string.
+    And many more....
+
+Approach: Maintain an interval [L, R] which is the interval with max R such that [L,R] is prefix substring (substring which is also prefix).
+          Steps for maintaining interval [L,R] are as follows:
+           1.If i > R then there is no prefix substring that starts before i and ends after i,
+           so we reset L and R and compute new [L,R] by comparing str[0..] to str[i..] and get Z[i] = (R-L+1).
+
+           2. If i < R , then set k = i - L. And check whether Z[k] lies in boundary of [L,R] or is there any more prefix substring starting from str[i].
+               To check this :
+
+               1. If Z[k] < R-i+1, then i doesn't lies in boundary and there is no prefix substring starting at str[i].
+               2. If Z[k] > R-i+1, then i lies in boundary and it is possible to extend the [L,R] interval thus we will set L
+                  as i and start matching from str[R]  onwards  and get new R then we will update interval [L,R] and calculate Z[i] = (R-L+1).
+
+Time Complexity: 0(n)
+Space Complexity : 0(n)
