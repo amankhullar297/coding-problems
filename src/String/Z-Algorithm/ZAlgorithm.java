@@ -16,14 +16,14 @@ public class ZAlgorithm {
             else{
                 int k = i - left;
 
-                if(zArray[k] < right - k + 1)
+                if(zArray[k] < right - i + 1)
                     zArray[i] = zArray[k];
                 else
                 {
-                    left = k;
+                    left = i;
                     while(right < value.length() && value.charAt(right) == value.charAt(right-left))
                         right++;
-                    zArray[k] = right - left;
+                    zArray[i] = right - left;
                     right--;
                 }
             }
