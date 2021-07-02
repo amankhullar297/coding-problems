@@ -1,0 +1,41 @@
+A heap is a tree-based data structure in which all the nodes of the tree are in a specific order.
+
+Properties of heap:
+1. Heap follows the property of complete binary tree i.e no nodes in next level will be filled until and unless all
+   parent nodes have both children.
+
+ex:                     4
+                      /   \
+                     6     5
+                    / \
+                   9   8
+
+2. Each node must be either greater(max heap) or smaller(min heap) than their children.
+
+Types of heap:
+
+1. Min Heap: In min heap every node is smaller than their children.
+
+ex:                     4
+                      /   \
+                     6     5
+                    / \
+                   9   8
+
+2. Max Heap: In max heap every node is greater than their children.
+
+ex:                     9
+                      /   \
+                     6     5
+                    / \
+                   1   3
+
+Representation: Heap is generally represented in the form of array.
+Let's consider array A as an heap;
+A = [4, 6, 5, 9, 8]
+
+Root: A[0] i.e 4 is considered as the root of the heap.
+Left child: The left child af an element at index i is present at an index 2i + 1.
+Right child: The right child af an element at index i is present at an index 2i + 2.
+Parent: The parent af an element at index i is present at an index (i -1) / 2.
+
