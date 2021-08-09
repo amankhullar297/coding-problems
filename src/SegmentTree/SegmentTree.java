@@ -68,10 +68,4 @@ public class SegmentTree {
     private int getMid(int start, int end) {
         return start + (end - start) / 2;
     }
-
-    public static void main(String[] args){
-        int[] arr = new int[]{1, 3, 5, 7, 9, 11};
-        SegmentTree tree = new SegmentTree(arr);
-        System.out.println(Arrays.toString(tree.tree));
-    }
 }
