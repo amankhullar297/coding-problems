@@ -1,0 +1,32 @@
+Segment trees are used to solve range related problems.
+Consider we have an array [0....n-1]
+
+And we need to find:
+         1. Find then sum of elements from l to r.
+         2. Find the minimum element from l to r.
+
+We can easily solve above problems using segment trees in optimal ways.
+
+Representation of Segment trees:
+
+Segment tree can be represented using array kinda similar as heaps representation.
+For each node at index i, the left child is 2*i+1, right child is 2*i+2 and the parent is (i-1)/2.
+
+1. Leaf nodes are the elements of the array.
+2. Internal nodes are the merging of leaf nodes or internal nodes. Merging can be on sum, min etc of leaf nodes,
+   depending upon the requirement.
+
+Segment tree for input [1, 3, 5, 7, 9, 11] is represented as:
+
+
+                             36
+                           [ 0-5 ]
+                          /       \
+                         9        27
+                       [0-2]     [3-5]
+                      /    \     /   \
+                     4      5   16    11
+                   [0-1]       [3-4]
+                  /     \      /   \
+                 1       3    7     9
+
