@@ -27,10 +27,8 @@ Time Complexity : O(n)
 
 package SegmentTree;
 
-import java.util.Arrays;
-
 public class SegmentTree {
-    int[] tree;
+    int[] data;
 
     public SegmentTree(int[] arr){
         // Allocate memory for segment tree
@@ -39,7 +37,7 @@ public class SegmentTree {
 
         //Maximum size of segment tree
         int max_size = 2 * (int) Math.pow(2, height) - 1;
-        this.tree = new int[max_size]; // Memory allocation
+        this.data = new int[max_size]; // Memory allocation
 
         this.constructTree( arr,0, arr.length - 1, 0);
     }
@@ -50,7 +48,7 @@ public class SegmentTree {
         // If there is one element in array, store it in current node of
         // segment tree and return
         if(start == end){
-            this.tree[index] = arr[start];
+            this.data[index] = arr[start];
             return arr[start];
         }
 
@@ -58,10 +56,10 @@ public class SegmentTree {
 
         // If there are more than one elements, then recur for left and
         // right subtrees and store the sum of values in this node
-        this.tree[index] = constructTree(arr, start, mid, index * 2 + 1) +
+        this.data[index] = constructTree(arr, start, mid, index * 2 + 1) +
                 constructTree(arr, mid + 1, end, index * 2 + 2);
 
-        return this.tree[index];
+        return this.data[index];
     }
 
     //Method to calculate mid
