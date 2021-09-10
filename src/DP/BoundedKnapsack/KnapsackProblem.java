@@ -5,9 +5,9 @@ Given an integer value 'w' that denotes the maximum weight of the bag. You have 
 Approach: Apply Dp by calculating max of cost by selecting a item and not selecting that iem.
 
 Input:
-    weight : [1, 2, 4, 5]
-    value : [1, 4, 5, 7]
-    weight : 7
+    weight = [1, 2, 4, 5]
+    value = [1, 4, 5, 7]
+    weight = 7
 
 Output: 11
 
@@ -16,6 +16,7 @@ Time Complexity: 0(n^2)
 Space Complexity: 0(n^2)
 
 */
+package DP.BoundedKnapsack;
 
 public class KnapsackProblem {
 
