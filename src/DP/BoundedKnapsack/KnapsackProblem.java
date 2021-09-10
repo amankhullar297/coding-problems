@@ -19,7 +19,6 @@ Space Complexity: 0(n^2)
 package DP.BoundedKnapsack;
 
 public class KnapsackProblem {
-
     public int maxCostBottomUp(int[] weight, int[] value, int n, int w){
         int[][] dp = new int[weight.length+1][w+1];
 

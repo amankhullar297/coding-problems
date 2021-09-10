@@ -19,14 +19,13 @@ Space Complexity: 0(n^2)
 package DP.BoundedKnapsack;
 
 public class EqualSumPartition {
-
     public boolean canEquallyPartitioned(int[] A){
         SubsetSum subsetSum = new SubsetSum();
         int sum = 0;
         for(int i : A)
             sum += i;
 
-        if(sum % 2 == 0)
+        if(sum % 2 == 1)
             return false;
         else
             return subsetSum.subsetWithGivenSum(A, sum/2);

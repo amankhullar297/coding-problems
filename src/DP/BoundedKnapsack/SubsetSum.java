@@ -17,7 +17,6 @@ Space Complexity: 0(n^2)
 package DP.BoundedKnapsack;
 
 public class SubsetSum {
-
     public boolean subsetWithGivenSum(int[] A, int sum){
         boolean[][] dp = new boolean[A.length+1][sum+1];
         for(int i = 0; i < sum+1; i++)
