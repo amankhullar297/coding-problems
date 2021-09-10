@@ -14,7 +14,6 @@ Output: true
 Time Complexity: 0(n^2)
 
 Space Complexity: 0(n^2)
-
 */
 
 package DP.BoundedKnapsack;
@@ -25,7 +24,7 @@ public class EqualSumPartition {
         SubsetSum subsetSum = new SubsetSum();
         int sum = 0;
         for(int i : A)
-            sum += A[i];
+            sum += i;
 
         if(sum % 2 == 0)
             return false;

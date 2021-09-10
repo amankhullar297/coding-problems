@@ -12,7 +12,6 @@ Output: 3
 Time Complexity: 0(n^2)
 
 Space Complexity: 0(n^2)
-
 */
 
 package DP.BoundedKnapsack;
