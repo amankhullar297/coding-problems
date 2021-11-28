@@ -1,5 +1,5 @@
 /*
-Given an array of changes and amount n. Return the minimum ways we can change n from given amounts in array. We can use particular amount from array
+Given an array of changes and amount n. Return the minimum elements using which we can change n from given amounts in array. We can use particular amount from array
 as many times as possible.
 
 Input:
@@ -16,7 +16,7 @@ Space Complexity: 0(n)
 package DP.UnBoundedKnapsack;
 
 public class CoinChangeMin {
-    public int minElementOfCoinChange(int[] coins, int n){
+    public int minElementsOnCoinChange(int[] coins, int n){
         int[] dp = new int[n+1];
 
         for(int i = 1; i < n+1; i++)
