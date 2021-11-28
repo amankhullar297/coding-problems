@@ -16,11 +16,6 @@ Space Complexity: 0(n)
 package DP.UnBoundedKnapsack;
 
 public class CoinChangeMin {
-    public static void main(String[] args) {
-        CoinChangeMin cm = new CoinChangeMin();
-        System.out.println(cm.minElementOfCoinChange(new int[]{9, 6, 5, 1}, 11));
-    }
-
     public int minElementOfCoinChange(int[] coins, int n){
         int[] dp = new int[n+1];
 
