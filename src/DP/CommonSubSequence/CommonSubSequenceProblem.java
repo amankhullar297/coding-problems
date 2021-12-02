@@ -2,7 +2,7 @@
 Given two strings ‘X’ and ‘Y’, find the length of the longest common substring.
 
 Approach: Start checking each characters. If characters matches, then increment count and check for rest characters in both
-strings and if character doesnot match then check first string by removing current character from other string and also check other string by
+strings and if character doesnot match then compare first string by removing current character from other string and also compare other string by
 removing current character from first string.
 
 Input:
