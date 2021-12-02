@@ -19,10 +19,6 @@ Space Complexity: 0(n^2)
 package DP.CommonSubSequence;
 
 public class CommonSubSequenceProblem {
-    public static void main(String[] args) {
-        System.out.println(new CommonSubSequenceProblem().commonSubsequenceTopDown("abcdmnoqr", "xyzpazbc2d"));
-    }
-
     public int commonSubsequenceBottomUp(String x, String y){
         int[][] dp = new int[x.length()+1][y.length()+1];
         for(int i = 0; i < x.length()+1; i++){
