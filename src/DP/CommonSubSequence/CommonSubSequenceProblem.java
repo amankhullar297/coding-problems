@@ -1,5 +1,5 @@
 /*
-Given two strings ‘X’ and ‘Y’, find the length of the longest common substring.
+Given two strings ‘X’ and ‘Y’, find the length of the longest common sequence.
 
 Approach: Start comparing each characters. If characters matches, then increment count and check for rest characters in both
 strings and if character doesnot match then compare first string by removing current character from other string and also compare other string by
@@ -45,13 +45,11 @@ public class CommonSubSequenceProblem {
     }
 
     public int commonSubsequenceTopDown(String x, String y){
+        return getDpOfCommonSubsequenceCount(x, y)[x.length()][y.length()];
+    }
+
+    private int[][] getDpOfCommonSubsequenceCount(String x, String y){
         int[][] dp = new int[x.length()+1][y.length()+1];
-
-        for(int i = 0; i< x.length()+1; i++)
-            dp[i][0] = 0;
-
-        for(int i = 0; i< y.length()+1; i++)
-            dp[0][i] = 0;
 
         for(int i = 1; i<x.length()+1; i++){
             for(int j = 1; j<y.length()+1; j++){
@@ -62,6 +60,30 @@ public class CommonSubSequenceProblem {
             }
         }
 
-        return dp[x.length()][y.length()];
+        return dp;
+    }
+
+    public String printLongestCommonSubsequence(String x, String y){
+        int[][] dp = getDpOfCommonSubsequenceCount(x, y);
+
+        int i =x.length(), j = y.length();
+        StringBuilder sb = new StringBuilder();
+
+        while(i > 0 && j > 0){
+            if(x.charAt(i-1) == y.charAt(j-1)){
+                sb.append(x.charAt(i-1));
+
+                i--;
+                j--;
+            }
+
+            else if(dp[i][j-1] > dp[i-1][j])
+                j--;
+
+            else
+                i--;
+        }
+
+        return sb.reverse().toString();
     }
 }
