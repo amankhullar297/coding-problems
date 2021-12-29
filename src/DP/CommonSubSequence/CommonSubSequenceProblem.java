@@ -48,7 +48,7 @@ public class CommonSubSequenceProblem {
         return getDpOfCommonSubsequenceCount(x, y)[x.length()][y.length()];
     }
 
-    private int[][] getDpOfCommonSubsequenceCount(String x, String y){
+    public int[][] getDpOfCommonSubsequenceCount(String x, String y){
         int[][] dp = new int[x.length()+1][y.length()+1];
 
         for(int i = 1; i<x.length()+1; i++){
