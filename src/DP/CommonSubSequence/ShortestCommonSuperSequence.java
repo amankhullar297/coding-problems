@@ -4,8 +4,8 @@ Given two strings ‘X’ and ‘Y’, find the length of the minimum string tha
 Approach: Calculate the length of maximum common subsequence and subtract it with the sum of both the strings.
 
 Input:
-    x = "acbcf"
-    y = "abcdaf"
+    x = "abcde"
+    y = "bdefklmn"
 
 Output: 10
 
